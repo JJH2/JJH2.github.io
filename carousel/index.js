@@ -26,7 +26,7 @@ for (let i = 0; i < carousel__list.length; i++) {
 carousel__btn.forEach(item => {
     item.addEventListener('click', function () {
         if (item.classList.contains('left__btn')) {
-            carouselEventLeft()
+            carouselEvent()
             console.log('left');
         } else if (item.classList.contains('right__btn')) {
             console.log(carousel__list.length);
@@ -35,7 +35,7 @@ carousel__btn.forEach(item => {
     
 });
 
-function carouselEventLeft() {
+function carouselEvent() {
     for (let i = 0; i < carousel__list.length; i++) {
         carousel__list[i].classList.remove(`carousel__content__${i + 1}`);
         // 왼쪽 버튼을 클릭하면 첫번째 요소를 바꾼다.
