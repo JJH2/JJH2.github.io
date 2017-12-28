@@ -1,0 +1,58 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+}
+
+.carousel {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #aaa;
+    position: relative;
+}
+.carousel__btn {
+    position: absolute;
+    background-color: rgba(33, 33, 33, 0.3);
+    padding: 10px;
+}
+.carousel__btn:hover {
+    background-color: rgba(33, 33, 33, 0.8);
+}
+
+.left__btn {
+    height: 100%;
+    left: 0;
+}
+.right__btn {
+    right: 0;
+    height: 100%;
+}
+button {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.con_1 {
+    background: pink;
+}
+.con_2 {
+    background: skyblue;
+}
+.con_3 {
+    background: aquamarine;
+}
+.con_4 {
+    background: burlywood;
+}
+.con_5 {
+    background: khaki;
+}

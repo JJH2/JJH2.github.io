@@ -43,9 +43,6 @@ for (let i = 0; i < boxLength.length; i++) {
                 changeUser = white;
             }
         }
-        whitePointer.sort((x, y) => x - y);
-        blackPointer.sort((x, y) => x - y);
-
         console.log(`white: ${whitePointer} black ${blackPointer}`);
 
         for (let i = 0; i < whitePointer.length; i++) {
