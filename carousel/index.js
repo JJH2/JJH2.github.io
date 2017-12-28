@@ -32,7 +32,6 @@ carousel__btn.forEach(item => {
             console.log(carousel__list.length);
         };
     });
-    
 });
 
 function carouselEventLeft() {
