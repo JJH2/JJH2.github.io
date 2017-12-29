@@ -11,3 +11,17 @@ const carousel__list = document.querySelectorAll('.carousel__content');
 for (let i = 0; i < 3; i++) {
     carousel__list.classList.a
 }
+
+// 클릭 이벤트
+carousel__btn.forEach(item => {
+    item.addEventListener('click', function () {
+        if (item.classList.contains('left__btn')) {
+            for(let i = 0; i < 3; i++) {
+                carousel
+            }
+            console.log('left');
+        } else if (item.classList.contains('right__btn')) {
+            console.log(carousel__list.length);
+        };
+    });
+});
