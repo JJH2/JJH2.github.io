@@ -26,11 +26,11 @@ for (let i = 0; i < carousel__list.length; i++) {
 carousel__btn.forEach(item => {
     item.addEventListener('click', function () {
         if (item.classList.contains('left__btn')) {
-            carouselEventLeft()
+            carouselEventLeft();
             console.log('left');
         } else if (item.classList.contains('right__btn')) {
             console.log(carousel__list.length);
-        };
+        }
     });
 });
 
