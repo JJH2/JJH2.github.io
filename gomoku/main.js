@@ -3,18 +3,34 @@ document.querySelector('.reset > button').addEventListener('click', function() {
     window.location.reload();
 })
 
+
+
+
+// 오목판 그리기
+
 /*
 단순히 256번 반복을 하기 위해서라면 단순 `for` 구문을 쓰는 것이 더 좋습니다.
 */
-// 오목판 그리기
-const arr = Array(256);
-arr.fill('j');
-arr.forEach(item => {
+
+// 수정 코드 2018.01.07.21:00
+for (let i = 0; i < 256; i++) {
     const gamePlace = document.querySelector(".template");
     const makeTemplate = document.createElement('div');
     makeTemplate.className = 'box';
     gamePlace.appendChild(makeTemplate);
-});
+}
+
+// 기존 코드
+// const arr = Array(256);
+// arr.fill('j');
+// arr.forEach(item => {
+//     const gamePlace = document.querySelector(".template");
+//     const makeTemplate = document.createElement('div');
+//     makeTemplate.className = 'box';
+//     gamePlace.appendChild(makeTemplate);
+// });
+
+
 
 
 // 돌 색상 및 순서 바꾸기
@@ -72,7 +88,6 @@ for (let i = 0; i < boxLength.length; i++) {
             // 오른쪽
             if (blackPointer.includes(blackPointer[i] + 1) && blackPointer.includes(blackPointer[i] + 2) && blackPointer.includes(blackPointer[i] + 3) && blackPointer.includes(blackPointer[i] + 4)) {
                 alert('black 승리');
-                
             }
             // 왼쪽
             if (blackPointer.includes(blackPointer[i] + 16) && blackPointer.includes(blackPointer[i] + 32) && blackPointer.includes(blackPointer[i] + 48) && blackPointer.includes(blackPointer[i] + 64)) {

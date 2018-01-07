@@ -20,7 +20,7 @@ html, body {
     float: left;
     position: relative;
 }
-.box:after {    
+.box:after { 
     content: "";
     position: absolute;
     width: 100%;
@@ -28,6 +28,12 @@ html, body {
     top: calc(50% - 1px);
     left: calc(50% - 1px);
     border: 1px solid #000;
+}
+.box:nth-child(16n):after {
+    border: none;
+}
+.box:nth-child(n+240):after {
+    border: none;
 }
 .box:hover {
     background: pink;
