@@ -3,6 +3,9 @@ document.querySelector('.reset > button').addEventListener('click', function() {
     window.location.reload();
 })
 
+/*
+단순히 256번 반복을 하기 위해서라면 단순 `for` 구문을 쓰는 것이 더 좋습니다.
+*/
 // 오목판 그리기
 const arr = Array(256);
 arr.fill('j');
@@ -44,7 +47,9 @@ for (let i = 0; i < boxLength.length; i++) {
             }
         }
         console.log(`white: ${whitePointer} black ${blackPointer}`);
-
+        /*
+        현재 아래 두 `for` 구문의 코드가 중복되어 있습니다. 함수를 통해 중복을 제거할 수 있을 것 같습니다.
+        */
         for (let i = 0; i < whitePointer.length; i++) {
             // 오른쪽
             if (whitePointer.includes(whitePointer[i] + 1) && whitePointer.includes(whitePointer[i] + 2) && whitePointer.includes(whitePointer[i] + 3) && whitePointer.includes(whitePointer[i] + 4)) {
