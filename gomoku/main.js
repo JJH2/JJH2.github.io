@@ -66,6 +66,36 @@ for (let i = 0; i < boxLength.length; i++) {
         /*
         현재 아래 두 `for` 구문의 코드가 중복되어 있습니다. 함수를 통해 중복을 제거할 수 있을 것 같습니다.
         */
+
+        // 수정 코드 2018.01.08.17:20
+        checkWinner(blackPointer, 'black');
+        checkWinner(whitePointer, 'white');
+    })
+}
+
+// 수정 코드 2018.01.08.17:20
+function checkWinner(pointer, playerName) {
+    for (let i = 0; i < pointer.length; i++) {
+        // 오른쪽
+        if (pointer.includes(pointer[i] + 1) && pointer.includes(pointer[i] + 2) && pointer.includes(pointer[i] + 3) && pointer.includes(pointer[i] + 4)) {
+            alert(`${playerName} 승리`);
+        }
+        // 왼쪽
+        if (pointer.includes(pointer[i] + 16) && pointer.includes(pointer[i] + 32) && pointer.includes(pointer[i] + 48) && pointer.includes(pointer[i] + 64)) {
+            alert(`${playerName} 승리`);
+        }
+        // 오른쪽 대각선
+        if (pointer.includes(pointer[i] + 15) && pointer.includes(pointer[i] + 30) && pointer.includes(pointer[i] + 45) && pointer.includes(pointer[i] + 60)) {
+            alert(`${playerName} 승리`);
+        }
+        // 왼쪽 대각선
+        if (pointer.includes(pointer[i] + 17) && pointer.includes(pointer[i] + 34) && pointer.includes(pointer[i] + 51) && pointer.includes(pointer[i] + 68)) {
+            alert(`${playerName} 승리`);
+        }
+    }
+}
+
+/* 기존 코드
         for (let i = 0; i < whitePointer.length; i++) {
             // 오른쪽
             if (whitePointer.includes(whitePointer[i] + 1) && whitePointer.includes(whitePointer[i] + 2) && whitePointer.includes(whitePointer[i] + 3) && whitePointer.includes(whitePointer[i] + 4)) {
@@ -102,5 +132,4 @@ for (let i = 0; i < boxLength.length; i++) {
                 alert('black 승리');
             }
         }
-    })
-}
+*/
