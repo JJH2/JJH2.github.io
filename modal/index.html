@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="modal-click">Click Me!!!</div>
+    <div class="modal-popup">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus magni autem optio animi labore atque ut porro non cupiditate corrupti quam vero, repellat nihil, veniam doloribus ad illum sint quidem dicta! Magnam provident tenetur sequi ipsa eius odit, amet totam vero commodi nesciunt unde aperiam iure suscipit laudantium ullam nisi doloribus reiciendis expedita quos facere labore ea. Eum sit sed voluptates exercitationem blanditiis. Fugiat veniam non doloribus necessitatibus beatae excepturi ipsum maxime quod quas culpa laudantium harum libero cum possimus odio ab totam, ullam, consequatur obcaecati est? Accusantium deleniti, maxime sint qui similique veritatis quia temporibus quasi blanditiis, voluptate nam!</p>
+        <button class="modal-popup__close-btn">close</button>
+    </div>
+    <div class="modal-bg"></div>
+
+
+    <script>
+        document.querySelector('.modal-click').addEventListener('click', function(e) {
+            document.querySelector('.modal-popup').classList.add('modal-popup--clicked');
+            document.querySelector('.modal-bg').classList.add('modal-bg--clicked');
+            document.querySelector('body').classList.add('modal-position');
+        })
+        document.querySelector('.modal-bg').addEventListener('click', function(e) {
+            document.querySelector('.modal-popup').classList.remove('modal-popup--clicked');
+            document.querySelector('.modal-bg--clicked').classList.remove('modal-bg--clicked');
+            document.querySelector('body').classList.remove('modal-position');
+        });
+        document.querySelector('.modal-popup__close-btn').addEventListener('click', function(e) {
+            document.querySelector('.modal-popup').classList.remove('modal-popup--clicked');
+            document.querySelector('.modal-bg--clicked').classList.remove('modal-bg--clicked');
+            document.querySelector('body').classList.remove('modal-position');
+        });
+
+    </script>
+</body>
+</html>
